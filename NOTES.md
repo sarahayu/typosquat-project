@@ -1,5 +1,9 @@
 # Notes
 
+Improvement Points:
+- pypi_unpopular.csv contains some popular packages, due to different casing, naming conventions, etc. 
+- despite my hardest attempts, duplicates still occur e.g. zope-interface and zope.interface, because programmers can't keep consistent naming conventions
+
 Some scripting tidbits
 
 
