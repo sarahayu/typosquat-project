@@ -1,4 +1,4 @@
-package-name,download-count
+package_name,download_count
 boto3,402012517
 botocore,190764765
 urllib3,190554859
