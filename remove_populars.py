@@ -5,7 +5,7 @@ import csv
 
 targets_filename = 'pypi_popular.txt'
 csv_output_dir = os.path.join('output')
-remove_populars_output_dir = os.path.join('output')
+remove_populars_output_dir = os.path.join('data', 'ossgadget')
 
 all_packages = [pathlib.Path(f).stem for f in os.listdir(csv_output_dir) if os.path.isfile(os.path.join(csv_output_dir, f))]
 
@@ -55,24 +55,3 @@ with open(os.path.join(csv_output_dir, 'confusers.csv'), 'r') as read_file,   \
 
         write_file.write(','.join(row))
         write_file.write('\n')
-
-
-# with open(os.path.join(onlyconf_output_dir, 'all_squats.csv'), 'w') as all_squats_file:
-#     all_squats_file.write('pkg_name,possible_squats\n')
-    
-#     for pkg_name in all_packages:
-#         print(f'Processing {pkg_name}...')
-#         with open(os.path.join(minified_output_dir, f'{pkg_name}.csv'), 'r') as log_file,   \
-#             open(os.path.join(onlyconf_output_dir, f'{pkg_name}.csv'), 'w') as output_file:
-#             squats = []
-
-#             for log_line in log_file:
-#                 squat = log_line.split(',')[0]
-
-#                 if squat in all_confusers:
-#                     output_file.write(f'{log_line}\n')
-
-#                     squats.append(squat)
-            
-#             squats_str = ';'.join(squats)
-#             all_squats_file.write(f'{pkg_name},{squats_str}\n')
